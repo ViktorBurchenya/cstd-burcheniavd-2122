@@ -19,6 +19,6 @@ Actions: New, Save, Load
 The proposal for data driven approach: configuration (saved in configuration file or DB): board size, distance, tool size, win statement, lose statement, AI parameters
 
 Database:
-Database in this program provides counting of amounts drinks that are in  the Machine. Also it counts sale attributes such as change, bills, customer order etc. Database is located on my computer and linked to my local SQL server
+Database in this program provides counting of amounts drinks that are in  the Machine. Also it counts sale attributes such as change, bills, customer order etc. Database is located on my computer and linked (file query.cpp) to my local SQL server 
 
 

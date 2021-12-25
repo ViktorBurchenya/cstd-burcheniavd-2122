@@ -30,9 +30,15 @@ int main()
 
 
     Drink machine[NUM_DRINKS] = {
+
+                        {"Cola     ", 0.75, 15},
+                        {"Root Beer", .75, 15},
+                        {"Lemon-Lime", .75, 15},
+
                         {"Cola     ", 0.75, 20},
                         {"Root Beer", .75, 20},
                         {"Lemon-Lime", .75, 20},
+
                         {"Grape Soda", .80, 20},
                         {"Cream Soda", .80, 20} };
 
@@ -53,6 +59,40 @@ int main()
 
     cout << "Total earnings: $" << earnings << endl;
     return 0;
+}
+
+
+//FIX
+// In this fix: I limited amount of Cola,Lemon-Lime,Root Bear to 15.
+// The main reason is to raise popularity Grape Soda and Cream Soda for helping decrease supply another drinks
+
+
+void DrinkManage::displayChoices()
+{
+    int const inventorySoda = 15;
+int bevChoice;
+
+
+for (int i = 0; i < SIZE; i++)
+    cout << (i + 1)
+    << ") " << drinks[i].name
+    << setw(5) << setprecision(3)
+    << drinks[i].price << setw(10) << "	Qty:  "
+    << drinks[i].inventory << endl;
+cout << "\nSelect a drink(1-5) or enter 6 to quit: ";
+cin >> bevChoice;
+
+while (bevChoice < 0 || bevChoice > 6)
+{
+    cout << "Invalid Entry. Please enter a value 1-5 " << endl;
+    cin >> bevChoice;
+}
+if (bevChoice > 0 && bevChoice < 6)
+{
+    bevChoice--;
+    buyDrink(bevChoice);
+}
+
 }
 
 

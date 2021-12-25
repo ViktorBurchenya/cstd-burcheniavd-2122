@@ -30,9 +30,15 @@ int main()
 
 
     Drink machine[NUM_DRINKS] = {
+
                         {"Cola     ", 0.75, 15},
                         {"Root Beer", .75, 15},
                         {"Lemon-Lime", .75, 15},
+
+                        {"Cola     ", 0.75, 20},
+                        {"Root Beer", .75, 20},
+                        {"Lemon-Lime", .75, 20},
+
                         {"Grape Soda", .80, 20},
                         {"Cream Soda", .80, 20} };
 
@@ -54,6 +60,7 @@ int main()
     cout << "Total earnings: $" << earnings << endl;
     return 0;
 }
+
 
 //FIX
 // In this fix: I limited amount of Cola,Lemon-Lime,Root Bear to 15.
@@ -87,6 +94,7 @@ if (bevChoice > 0 && bevChoice < 6)
 }
 
 }
+
 
 
 int getChoice(Drink m[])
